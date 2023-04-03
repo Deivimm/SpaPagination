@@ -1,27 +1,45 @@
-# SpaPagination
+# Google Books Search SPA
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+Este é um Single Page Application (SPA) construído usando o framework Angular 13 que permite a pesquisa de livros na API do Google Books.
 
-## Development server
+## Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+O aplicativo permite ao usuário:
 
-## Code scaffolding
+- Pesquisar livros por palavras-chave
+- Paginação dos resultados da pesquisa
+- Visualizar informações relevantes de cada livro, como título, autor, descrição, data de publicação, número de páginas e imagem da capa do livro.
+- Acesso ao link da página do livro no Google Books para mais informações
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Requisitos
 
-## Build
+- Node.js (versão 14.x ou superior)
+- Angular CLI (versão 13.x ou superior)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Como usar
 
-## Running unit tests
+Para executar o projeto, siga os seguintes passos:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone o repositório em sua máquina local;
+2. Instale as dependências do projeto com o comando `npm install`;
+3. Execute o comando `ng serve --open` para iniciar o servidor de desenvolvimento;
+4. Acesse a aplicação em seu navegador, no endereço `http://localhost:4200`.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## API
 
-## Further help
+Este aplicativo consome a API do Google Books, que é acessível através do seguinte endpoint:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://www.googleapis.com/books/v1/volumes?q={searchTerm}&startIndex={startIndex}&maxResults={maxResults}
+
+- `searchTerm`: Palavra-chave a ser pesquisada
+- `startIndex`: Índice do primeiro resultado a ser retornado (para paginação)
+- `maxResults`: Número máximo de resultados a serem retornados (para paginação)
+
+## Considerações finais
+
+Este aplicativo foi desenvolvido com o objetivo de demonstrar o conhecimento em Angular e boas práticas de desenvolvimento de software.
+
+O código está organizado em uma estrutura MVC, com os componentes separados em pastas distintas. Também foram criados testes unitários e de integração para garantir a qualidade e funcionalidade do aplicativo.
+
+Caso tenha alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato comigo. Obrigado por usar o Google Books Search SPA!
