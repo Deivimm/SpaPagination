@@ -1,35 +1,26 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<div class="navbar navbar-inverse">
+<nav class="navbar navbar-expand-lg navbar-custom">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="navbar-header">
-          <button class="navbar-toggle" data-target="#mobile_menu" data-toggle="collapse"><span
-              class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-          <a routerLink="home" class="navbar-brand">DevChallenge</a>
-        </div>
-        <div class="navbar-collapse collapse" id="mobile_menu">
-          <ul class="nav navbar-nav">
-            <li class="active"><a routerLink="home">Início</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <form action="" class="navbar-form">
-                <div class="form-group">
-                  <div class="input-group">
-                    <input type="search" name="search" id="" placeholder="Procurar por um livro..." class="form-control">
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                  </div>
-                </div>
-              </form>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <a class="navbar-brand" routerLink="home">Paginação</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Contato</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar um livro" aria-label="Buscar um livro">
+        <button class="btn btn-outline-success" type="submit">Procurar</button>
+      </form>
     </div>
   </div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</nav>

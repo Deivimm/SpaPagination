@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Book } from '../app/Book';
 
 @Injectable({
   providedIn: 'root'
@@ -13,10 +12,13 @@ export class ApiGoogleBooksService {
 
   constructor(private http: HttpClient) { }
 
-  searchBooks(query: string): Observable<Book[]> {
-    const url = `${this.apiUrl}?q=${query}`;
-    return this.http.get<{ items: Book[] }>(url).pipe(
-      map(response => response.items || [])
+  searchBooks(query: string, startIndex: number, maxResults: number): Observable<{ totalItems: any; items: any[]; }> {
+    const url = `${this.apiUrl}?q=${query}&startIndex=${startIndex}&maxResults=${maxResults}`;
+    return this.http.get<any>(url).pipe(
+      map(response => {
+        const totalItems = response.totalItems || 0;
+        return { totalItems, items: response.items || [] };
+      })
     );
   }
 }
