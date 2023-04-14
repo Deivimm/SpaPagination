@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiGoogleBooksService } from 'src/services/ApiGoogleBooks.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navBar',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navBar.component.css']
 })
 export class NavBarComponent implements OnInit {
+  searchQuery: string = '';
 
-  constructor() { }
+  constructor(private apiGoogleBooksService: ApiGoogleBooksService, private router: Router) { }
+
+  onSearch() {
+    this.router.navigate(['/home'], { queryParams: { q: this.searchQuery } });
+  }
 
   ngOnInit() {
   }
-
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiGoogleBooksService } from 'src/services/ApiGoogleBooks.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,12 +14,16 @@ export class HomeComponent implements OnInit {
   totalItems: number = 0;
   totalPages: number = 0;
   displayPages: number[] = [];
+  searchQuery: string = '';
 
-  constructor(private apiGoogleBooksService: ApiGoogleBooksService) { }
+  constructor(private apiGoogleBooksService: ApiGoogleBooksService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const query = 'Angular';
-    this.loadBooks(query, this.currentPage);
+    this.route.queryParams.subscribe(params => {
+      this.searchQuery = params['q'] || 'Angular';
+      this.currentPage = 1;
+      this.loadBooks(this.searchQuery, this.currentPage);
+    });
   }
 
   loadBooks(query: string, page: number): void {
@@ -44,7 +49,7 @@ export class HomeComponent implements OnInit {
   onPageChange(page: number): void {
     if (page >= 1 && page <= this.totalPages) {
       this.currentPage = page;
-      this.loadBooks('Angular', this.currentPage);
+      this.loadBooks(this.searchQuery, this.currentPage);
     }
   }
 

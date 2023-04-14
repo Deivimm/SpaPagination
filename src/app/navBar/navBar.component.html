@@ -18,9 +18,9 @@
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar um livro" aria-label="Buscar um livro">
-        <button class="btn btn-outline-success" type="submit">Procurar</button>
-      </form>
+        <input class="form-control me-2" type="search" [(ngModel)]="searchQuery" placeholder="Buscar um livro" aria-label="Buscar um livro" [ngModelOptions]="{standalone: true}">
+        <button class="btn btn-outline-success" type="submit" (click)="onSearch()">Procurar</button>
+      </form>      
     </div>
   </div>
 </nav>
