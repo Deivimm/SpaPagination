@@ -12,6 +12,12 @@
     color: #ffffff;
 }
 
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .nav-link:hover,
+.navbar-custom .btn:hover {
+    color: #28666e;
+}
+
 .navbar-custom .btn-outline-success {
     border-color: #ffffff;
     color: #ffffff;

@@ -4,7 +4,7 @@
 }
 
 h1 {
-  color: gray;
+  color: rgb(0, 0, 0);
   text-align: center;
   font-size: 50px;
   margin-top: 80px;
@@ -36,7 +36,7 @@ article a::after {
 
 article h2 {
   margin: 0 0 18px 0;
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.9rem;
   letter-spacing: 0.06em;
   color: var(--title-color);

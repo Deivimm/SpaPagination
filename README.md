@@ -8,7 +8,7 @@ O aplicativo permite ao usuário:
 
 - Pesquisar livros por palavras-chave
 - Paginação dos resultados da pesquisa
-- Visualizar informações relevantes de cada livro, como título, autor, descrição, data de publicação, número de páginas e imagem da capa do livro.
+- Visualizar informações relevantes de cada livro, como título, autor e imagem da capa do livro.
 - Acesso ao link da página do livro no Google Books para mais informações
 
 ## Requisitos
@@ -40,6 +40,6 @@ https://www.googleapis.com/books/v1/volumes?q={searchTerm}&startIndex={startInde
 
 Este aplicativo foi desenvolvido com o objetivo de demonstrar o conhecimento em Angular e boas práticas de desenvolvimento de software.
 
-O código está organizado em uma estrutura MVC, com os componentes separados em pastas distintas. Também foram criados testes unitários e de integração para garantir a qualidade e funcionalidade do aplicativo.
+O código está organizado em uma estrutura MVC, com os componentes separados em pastas distintas. 
 
 Caso tenha alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato comigo. Obrigado por usar o Google Books Search SPA!

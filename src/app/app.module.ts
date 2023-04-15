@@ -8,14 +8,16 @@ import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './navBar/navBar.component';
 import { FormsModule } from '@angular/forms';
 import { SobreComponent } from './sobre/sobre.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
       HomeComponent,
       NavBarComponent,
-      SobreComponent
+      SobreComponent,
+      FooterComponent
    ],
   imports: [
     BrowserModule,
